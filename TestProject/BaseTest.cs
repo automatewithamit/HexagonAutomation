@@ -23,7 +23,8 @@ namespace TestProject
             Console.WriteLine("Starting the CHROME Browser...");
             //1. To Start the Browser
             DriverManager.driver = new ChromeDriver();
-
+            //Implicit waits are always applied one time to the driver instance
+            DriverManager.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
             DriverManager.driver.Manage().Window.Maximize();
 

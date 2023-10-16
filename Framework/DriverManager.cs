@@ -9,9 +9,8 @@ namespace Framework
 {
     public class DriverManager
     {
+        [ThreadStatic]
         public static IWebDriver driver;
-
-
 
     }
 }

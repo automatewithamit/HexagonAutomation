@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TestProject
 {
-    [TestFixture]
+    [TestFixture, Parallelizable]
     public class FlikartCartTest : BaseTest
     {
 

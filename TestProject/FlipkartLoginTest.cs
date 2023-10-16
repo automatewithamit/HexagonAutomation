@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace TestProject
 {
-    [TestFixture]
+    [TestFixture, Parallelizable]
     public class FlipkartLoginTest : BaseTest
     {
 
@@ -18,7 +18,7 @@ namespace TestProject
 
             //navigate to flipkart
 
-            // enter email
+            //enter email
             FlipkartLoginPage loginPage = new FlipkartLoginPage();
             loginPage.closeAfterEnteringEmail(email);
             

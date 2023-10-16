@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PageObjects
 {
-    public class FlipkartHomePage
+    public class FlipkartHomePage : ElementUtil
     {
 
         //1.All the WebElements available on the page
