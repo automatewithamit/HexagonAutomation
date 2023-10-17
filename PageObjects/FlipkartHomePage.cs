@@ -1,4 +1,5 @@
 ﻿using Framework;
+using Framework.WebElements;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -10,16 +11,17 @@ namespace PageObjects
 {
     public class FlipkartHomePage 
     {
-        IWebElement cartButton = DriverManager.driver.FindElement(By.LinkText("Cart"));
-        IWebElement loginButton = DriverManager.driver.FindElement(By.LinkText("Cart"));
+        Button cartButton = new Button(By.LinkText("Cart"));
+        Button travelButton = new Button(By.XPath("//a[@aria-label='Travel']"));
 
         public void clickCartButton()
         {
             cartButton.Click();
         }
-        public void clickloginButton()
+        public FlipkartTravelPage gotoTravelSection()
         {
-            loginButton.Click();
+            travelButton.Click();
+            return new FlipkartTravelPage();
         }
 
     }

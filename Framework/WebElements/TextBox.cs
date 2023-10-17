@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,19 @@ namespace Framework.WebElements
         {
             this.Locator = locator;
         }
-        public void SetText(string text)
+        public void SetText(string text, bool isAutofill = false)
         {
             ElementUtil.SetText(Locator, text);
-        }
+            if (isAutofill)
+            {
+                var by = new ByChained(Locator, By.XPath("./../following-sibling::div//div[text()='" + text + "']"));
+                ElementUtil.Click(by);
+            }
 
+        }
+        public void SetText(string text)
+        {
+
+        }
     }
 }

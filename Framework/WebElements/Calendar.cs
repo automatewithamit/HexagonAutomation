@@ -16,5 +16,14 @@ namespace Framework.WebElements
         {
             this.Locator = locator;
         }
+
+        public void SelectDate(string date)
+        {
+
+        }
+
+
+
+
     }
 }

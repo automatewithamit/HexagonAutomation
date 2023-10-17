@@ -19,11 +19,14 @@ namespace TestProject
 
 
             //2. close login dailog
-            FlipkartLoginPage_Old loginPage = new FlipkartLoginPage_Old();
+            FlipkartLoginPage loginPage = new FlipkartLoginPage();
             loginPage.closeLoginDailog();
-
+            FlipkartHomePage homePage = new FlipkartHomePage();
 
             //3. go to Travel
+            homePage.gotoTravelSection().searchForFlights("HYD","BLR","","");
+
+
 
 
             //4. Book a ticket from HYD to DELHI

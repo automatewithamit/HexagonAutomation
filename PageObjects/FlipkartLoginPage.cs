@@ -12,15 +12,9 @@ namespace PageObjects
 
     public class FlipkartLoginPage 
     {
-        //a[@title='Cart' and contains(@href , 'viewcart')][1]
-        //a[@title='Cart' and text()='Cart']
-
+      
         Button closeButton = new Button(By.XPath("//span[@role='button']"));
         TextBox emailOrMobileTextbox = new TextBox(By.XPath("//label[text()='Enter Email/Mobile number']/../input"));
-
-        //By byCloseButton = By.XPath("//span[@role='button']");
-        //By byEmailOrMobile = By.XPath("//label[text()='Enter Email/Mobile number']/../input");
-
 
         public void closeLoginDailog()
         {
