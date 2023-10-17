@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace PageObjects
 {
 
-    public class FlipkartLoginPage 
+    public class FlipkartLoginPage : BasePage
     {
       
         Button closeButton = new Button(By.XPath("//span[@role='button']"));

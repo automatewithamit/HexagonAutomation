@@ -17,17 +17,11 @@ namespace TestProject
         [SetUp] //This gets executed before Test
         public void Setup()
         {
-            DriverManager manager = new DriverManager();
             Console.WriteLine("Setup");
 
             Console.WriteLine("Starting the CHROME Browser...");
-            //1. To Start the Browser
-            DriverManager.driver = new ChromeDriver();
-            //Implicit waits are always applied one time to the driver instance
-            DriverManager.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
-            DriverManager.driver.Manage().Window.Maximize();
-
+            DriverManager.StartBrowser();
             //2. Navigate to the Website
             DriverManager.driver.Navigate().GoToUrl("https://www.flipkart.com/");
 

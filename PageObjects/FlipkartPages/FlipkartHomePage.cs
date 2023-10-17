@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace PageObjects
 {
-    public class FlipkartHomePage 
+
+    public class FlipkartHomePage : BasePage
     {
         Button cartButton = new Button(By.LinkText("Cart"));
         Button travelButton = new Button(By.XPath("//a[@aria-label='Travel']"));

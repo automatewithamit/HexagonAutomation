@@ -24,11 +24,7 @@ namespace TestProject
             FlipkartHomePage homePage = new FlipkartHomePage();
 
             //3. go to Travel
-            homePage.gotoTravelSection().searchForFlights("HYD","BLR", "12/11/2023");
-
-            
-
-
+            homePage.gotoTravelSection().searchForFlights("HYD","BLR", "12/11/2023");   
             //4. Book a ticket from HYD to DELHI
         }
 
