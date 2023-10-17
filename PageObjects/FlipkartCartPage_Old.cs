@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PageObjects
 {
-    public class FlipkartCartPage : ElementUtil
+    public class FlipkartCartPage_Old : ElementUtil
     {
         IWebElement missingCartText = DriverManager.driver.FindElement(By.XPath("//div[text()='Missing Cart items?']"));
 

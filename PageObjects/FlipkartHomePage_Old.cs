@@ -8,8 +8,23 @@ using System.Threading.Tasks;
 
 namespace PageObjects
 {
-    public class FlipkartHomePage 
+    public class FlipkartHomePage_Old : ElementUtil
     {
+
+        //1.All the WebElements available on the page
+        //2.Any Action we wanted to perform on the webElement
+
+
+        //Locators --> we use locators to identify any web element on the webpage
+        //1. name
+        //2. id
+        //3. class Name
+        //4. XPATH
+        //5. CSS Selector
+        //6. TagName
+        //7. Link Text
+        //8. partial Link Text
+
         IWebElement cartButton = DriverManager.driver.FindElement(By.LinkText("Cart"));
         IWebElement loginButton = DriverManager.driver.FindElement(By.LinkText("Cart"));
 

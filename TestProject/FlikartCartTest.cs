@@ -21,14 +21,14 @@ namespace TestProject
 
             Console.WriteLine("Starting to Verify Cart Button Functionality");
             // close the login dailog box
-            FlipkartLoginPage loginPage = new FlipkartLoginPage();
+            FlipkartLoginPage_Old loginPage = new FlipkartLoginPage_Old();
             loginPage.closeLoginDailog();
             //click on cart
-            FlipkartHomePage homePage = new FlipkartHomePage();
+            FlipkartHomePage_Old homePage = new FlipkartHomePage_Old();
             homePage.clickCartButton();
             Console.WriteLine("Clicked Cart Button");
             //verify the 'Missing Cart items?'
-            FlipkartCartPage cartPage = new FlipkartCartPage();
+            FlipkartCartPage_Old cartPage = new FlipkartCartPage_Old();
             string actualemptyCartMessage = cartPage.GetActualEmptyCartMessage();
             Assert.AreEqual(expectedEmptyCartMessage, actualemptyCartMessage);
             Thread.Sleep(5000);

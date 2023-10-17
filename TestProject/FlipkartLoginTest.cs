@@ -19,7 +19,7 @@ namespace TestProject
             //navigate to flipkart
 
             //enter email
-            FlipkartLoginPage loginPage = new FlipkartLoginPage();
+            FlipkartLoginPage_Old loginPage = new FlipkartLoginPage_Old();
             loginPage.closeAfterEnteringEmail(email);
             
             
