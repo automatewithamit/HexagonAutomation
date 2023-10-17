@@ -30,7 +30,6 @@ namespace Framework.WebElements
                 var by = new ByChained(Locator, By.XPath("./../following-sibling::div//div[text()='" + text + "']"));
                 ElementUtil.Click(by);
             }
-
         }
         public void SetText(string text)
         {
