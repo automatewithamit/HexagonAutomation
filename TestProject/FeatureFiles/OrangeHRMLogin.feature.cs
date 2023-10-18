@@ -74,14 +74,14 @@ namespace TestProject.FeatureFiles
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify Canvas From OrangeHRM")]
+        [NUnit.Framework.DescriptionAttribute("Verify Admin TabName From OrangeHRM")]
         [NUnit.Framework.CategoryAttribute("Regression")]
-        public void VerifyCanvasFromOrangeHRM()
+        public void VerifyAdminTabNameFromOrangeHRM()
         {
             string[] tagsOfScenario = new string[] {
                     "Regression"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Canvas From OrangeHRM", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Admin TabName From OrangeHRM", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -99,7 +99,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Clicks on Admin Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
- testRunner.Then("Verify Admin page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Verify Admin page is displayed with \"Admin\\r\\nUser Management\" name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

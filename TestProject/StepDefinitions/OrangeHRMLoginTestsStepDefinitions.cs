@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using PageObjects.OrangeHRMPages;
 using System;
 using TechTalk.SpecFlow;
@@ -17,13 +18,23 @@ namespace TestProject.StepDefinitions
         [Given(@"Clicks on Admin Tab")]
         public void GivenClicksOnAdminTab()
         {
-            
+            OrangeHRMDashboardPage dashboardPage = new OrangeHRMDashboardPage();
+            dashboardPage.navigateTo().adminMenu();
+
         }
 
-        [Then(@"Verify Admin page is displayed")]
-        public void ThenVerifyAdminPageIsDisplayed()
+        [Then(@"Verify Admin page is displayed with ""([^""]*)"" name")]
+        public void ThenVerifyAdminPageIsDisplayedWithName(string expectedTabName)
         {
+            OrangeHRMHeaderPage headerPage = new OrangeHRMHeaderPage();
+            string currentTabName = headerPage.GetCurrentTabName();
             
+            Assert.AreEqual(expectedTabName, currentTabName);
         }
+
+
+       
+        
+
     }
 }

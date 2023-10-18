@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PageObjects.OrangeHRMPages
 {
-    public class OrangeHRMDashboardPage
+    public class OrangeHRMDashboardPage : OrangeHRMBasePage
     {
         Canvas empDistributionBySubUnitCanvas = new Canvas(By.XPath("//p[text()='Employee Distribution by Sub Unit']/../..//following-sibling::div//canvas"));
         Canvas empDistributionByLocationCanvas = new Canvas(By.XPath("//p[text()='Employee Distribution by Location']/../..//following-sibling::div//canvas"));

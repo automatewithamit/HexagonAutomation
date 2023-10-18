@@ -54,6 +54,11 @@ namespace Framework
             var element = DriverManager.driver.FindElement(locator);
             return element.Size;
         }
+        public static string GetText(By locator)
+        {
+            var element = DriverManager.driver.FindElement(locator);
+            return element.Text;
+        }
         //public void SetText(By locator, string text)
         //{
         //    try

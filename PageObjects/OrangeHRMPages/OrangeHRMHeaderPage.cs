@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace PageObjects.OrangeHRMPages
 {
-    public class NavigationMenuPage
+    public class OrangeHRMHeaderPage : OrangeHRMBasePage
     {
-        Button adminMenuButton = new Button(By.XPath("//a[contains(@href,'viewAdminModule')]"));
+        Label TabNameText = new Label(By.XPath("//span[contains(@class,'header-breadcrumb')]"));
 
-        public void adminMenu()
+        public string GetCurrentTabName()
         {
-            adminMenuButton.Click();
+            return TabNameText.GetLabelText();
         }
 
     }

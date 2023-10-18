@@ -1,4 +1,7 @@
-﻿using TechTalk.SpecFlow;
+﻿using Framework;
+using Framework.Helpers;
+using System;
+using TechTalk.SpecFlow;
 
 namespace TestProject
 {
@@ -7,28 +10,27 @@ namespace TestProject
     {
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
-        [BeforeScenario("@tag1")]
-        public void BeforeScenarioWithTag()
+        [BeforeScenario]
+        public void BeforeScenario()
         {
-            // Example of filtering hooks using tags. (in this case, this 'before scenario' hook will execute if the feature/scenario contains the tag '@tag1')
-            // See https://docs.specflow.org/projects/specflow/en/latest/Bindings/Hooks.html?highlight=hooks#tag-scoping
+            Console.WriteLine("Setup");
 
-            //TODO: implement logic that has to run before executing each scenario
+            Console.WriteLine("Starting the CHROME Browser...");
+
+            DriverManager.StartBrowser();
+            string url = JSONHelper.GetValue("currentURL");
+            //2. Navigate to the Website
+            DriverManager.driver.Navigate().GoToUrl(url);
         }
 
-        [BeforeScenario(Order = 1)]
-        public void FirstBeforeScenario()
-        {
-            // Example of ordering the execution of hooks
-            // See https://docs.specflow.org/projects/specflow/en/latest/Bindings/Hooks.html?highlight=order#hook-execution-order
-
-            //TODO: implement logic that has to run before executing each scenario
-        }
+        
 
         [AfterScenario]
         public void AfterScenario()
         {
-            //TODO: implement logic that has to run after executing each scenario
+            Console.WriteLine("Closing the Browser...");
+            DriverManager.driver.Quit();
+            Console.WriteLine("Tear down");
         }
     }
 }
