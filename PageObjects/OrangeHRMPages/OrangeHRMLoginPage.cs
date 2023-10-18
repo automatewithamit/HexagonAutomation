@@ -13,6 +13,7 @@ namespace PageObjects.OrangeHRMPages
         TextBox userNameTextBox = new TextBox(By.XPath("//input[@placeholder='Username']"));
         TextBox passwordTextBox = new TextBox(By.XPath("//input[@placeholder='Password']"));
         Button loginButton = new Button(By.XPath("//button[@type='submit']"));
+
         public void loginToOrangeHRM(string username,string password)
         {
             userNameTextBox.SetText(username);

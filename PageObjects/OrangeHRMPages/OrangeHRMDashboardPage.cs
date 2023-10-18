@@ -12,9 +12,11 @@ namespace PageObjects.OrangeHRMPages
     {
         Canvas empDistributionBySubUnitCanvas = new Canvas(By.XPath("//p[text()='Employee Distribution by Sub Unit']/../..//following-sibling::div//canvas"));
         Canvas empDistributionByLocationCanvas = new Canvas(By.XPath("//p[text()='Employee Distribution by Location']/../..//following-sibling::div//canvas"));
+        
+        
         public void GetCanvasData()
         {
-            empDistributionBySubUnitCanvas.GetCanvasData();
+            //empDistributionBySubUnitCanvas.GetCanvasData();
             empDistributionByLocationCanvas.GetCanvasData();
         }
 
