@@ -1,5 +1,7 @@
 {
   "browserType": "chrome",
+  "currentURL": "https://www.worldometers.info/coronavirus/country/india/",
   "OrangeHRM_URL": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-  "Flipkart_URL": "https://www.flipkart.com/"
+  "Flipkart_URL": "https://www.flipkart.com/",
+  "WorldoMeter_URL": "https://www.worldometers.info/coronavirus/country/india/"
 }

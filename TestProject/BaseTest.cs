@@ -23,7 +23,7 @@ namespace TestProject
             Console.WriteLine("Starting the CHROME Browser...");
 
             DriverManager.StartBrowser();
-            string url = JSONHelper.GetValue("OrangeHRM_URL");
+            string url = JSONHelper.GetValue("currentURL");
             //2. Navigate to the Website
             DriverManager.driver.Navigate().GoToUrl(url);
 
