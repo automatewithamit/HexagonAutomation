@@ -31,9 +31,6 @@ namespace Framework.WebElements
                 ElementUtil.Click(by);
             }
         }
-        public void SetText(string text)
-        {
-
-        }
+        
     }
 }

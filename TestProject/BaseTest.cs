@@ -1,4 +1,5 @@
 ﻿using Framework;
+using Framework.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -22,8 +23,9 @@ namespace TestProject
             Console.WriteLine("Starting the CHROME Browser...");
 
             DriverManager.StartBrowser();
+            string url = JSONHelper.GetValue("OrangeHRM_URL");
             //2. Navigate to the Website
-            DriverManager.driver.Navigate().GoToUrl("https://www.flipkart.com/");
+            DriverManager.driver.Navigate().GoToUrl(url);
 
         }
 

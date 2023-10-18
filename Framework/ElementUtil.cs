@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,11 @@ namespace Framework
 
                 Console.WriteLine("Clicking on Element --> " + locator.ToString());
             }
+        }
+        public static Size GetSize(By locator)
+        {
+            var element = DriverManager.driver.FindElement(locator);
+            return element.Size;
         }
         //public void SetText(By locator, string text)
         //{
