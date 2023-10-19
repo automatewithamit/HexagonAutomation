@@ -1,5 +1,7 @@
-﻿using Framework;
+﻿using AventStack.ExtentReports;
+using Framework;
 using Framework.Helpers;
+using Framework.Reporting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -15,12 +17,29 @@ namespace TestProject
     [TestFixture]
     public class BaseTest
     {
+        ExtentReports extentReport;
+       
+
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            ExtentReport Report = new ExtentReport();
+            extentReport = Report.CreateReport();          
+
+
+        }
+        
+
         [SetUp] //This gets executed before Test
         public void Setup()
         {
-            Console.WriteLine("Setup");
+            string testMethodName = TestContext.CurrentContext.Test.Name;
 
-            Console.WriteLine("Starting the CHROME Browser...");
+            ExtentReport.Log = extentReport.CreateTest(testMethodName);
+
+            ExtentReport.Log.Info("Setup");
+
+            ExtentReport.Log.Info("Starting the CHROME Browser...");
 
             DriverManager.StartBrowser();
             string url = JSONHelper.GetValue("currentURL");
@@ -32,9 +51,14 @@ namespace TestProject
         [TearDown]
         public void TearDown()
         {
-            Console.WriteLine("Closing the Browser...");
+            ExtentReport.Log.Info("Closing the Browser...");
             DriverManager.driver.Quit();
-            Console.WriteLine("Tear down");
+            ExtentReport.Log.Info("Tear down");
+        }
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
+        {
+            extentReport.Flush();
         }
     }
 }

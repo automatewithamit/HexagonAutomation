@@ -25,7 +25,7 @@ namespace Framework
             {
                 case "chrome":
                     //1. To Start the Browser
-                    DriverManager.driver = new ChromeDriver();
+                    DriverManager.driver = new ChromeDriver(OptionsManager.GetChromeOptions());
                     break;
                 case "firefox":
                     //1. To Start the Browser

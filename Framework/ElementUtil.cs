@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Reporting;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,7 +17,7 @@ namespace Framework
             {
                 IWebElement element = DriverManager.driver.FindElement(locator);
                 element.Click();
-                Console.WriteLine("Clicking on Element --> " + locator.ToString());
+                ExtentReport.Log.Info("Clicking on Element --> " + locator.ToString());
             }
             catch (StaleElementReferenceException)
             {
@@ -26,7 +27,7 @@ namespace Framework
             catch (Exception e)
             {
 
-                Console.WriteLine("Clicking on Element --> " + locator.ToString());
+                ExtentReport.Log.Info("Clicking on Element --> " + locator.ToString());
             }
 
         }
@@ -36,7 +37,7 @@ namespace Framework
             {
                 IWebElement element = DriverManager.driver.FindElement(locator);
                 element.SendKeys(text);
-                Console.WriteLine("Set Text '" + text + "' in Element --> " + locator.ToString());
+                ExtentReport.Log.Info("Set Text '" + text + "' in Element --> " + locator.ToString());
             }
             catch (StaleElementReferenceException)
             {
@@ -46,7 +47,7 @@ namespace Framework
             catch (Exception e)
             {
 
-                Console.WriteLine("Clicking on Element --> " + locator.ToString());
+                ExtentReport.Log.Info("Clicking on Element --> " + locator.ToString());
             }
         }
         public static Size GetSize(By locator)
@@ -65,7 +66,7 @@ namespace Framework
         //    {
         //        IWebElement element = DriverManager.driver.FindElement(locator);
         //        element.SendKeys(text);
-        //        Console.WriteLine("Set Text '" + text + "' in Element --> " + locator.ToString());
+        //        ExtentReport.Log.Info("Set Text '" + text + "' in Element --> " + locator.ToString());
         //    }
         //    catch (StaleElementReferenceException)
         //    {
@@ -75,7 +76,7 @@ namespace Framework
         //    catch (Exception e)
         //    {
 
-        //        Console.WriteLine("Clicking on Element --> " + locator.ToString());
+        //        ExtentReport.Log.Info("Clicking on Element --> " + locator.ToString());
         //    }
         //}
     }

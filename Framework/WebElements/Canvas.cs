@@ -18,10 +18,7 @@ namespace Framework.WebElements
         }
         public void GetCanvasData()
         {
-            Size size = ElementUtil.GetSize(Locator);
-            Thread.Sleep(4000);
-            int height = size.Height;
-            int width = size.Width;
+
 
             Actions builder = new Actions(DriverManager.driver);
             Thread.Sleep(5000);
@@ -41,16 +38,8 @@ namespace Framework.WebElements
 
                 builder.MoveToElement(element, x, y).Perform();
 
-                try
-                {
-                    var tooltipElement = DriverManager.driver.FindElement(By.XPath("//span[@id='oxd-pie-chart-tooltip']"));
-
-                    Console.WriteLine(tooltipElement.Text);
-                }
-                catch (NoSuchElementException)
-                {
-                    return;
-                }
+                var tooltipElement = DriverManager.driver.FindElement(By.XPath("//span[@id='oxd-pie-chart-tooltip']"));
+                Console.WriteLine(tooltipElement.Text);
 
             }
             //builder.MoveToElement(element, (int)x, (int)y).Perform();

@@ -18,6 +18,18 @@ namespace TestProject.OrangeHRMTests
             loginPage.loginToOrangeHRM("Admin", "admin123");
             OrangeHRMDashboardPage dashboardPage = new OrangeHRMDashboardPage();
             dashboardPage.GetCanvasData();
+            
+            //Hover upon the element in circular way
+            //Read tooltip values
+        }
+        [Test]
+        public void OrangeHRM_Login_Verification()
+        {
+            OrangeHRMLoginPage loginPage = new OrangeHRMLoginPage();
+            loginPage.loginToOrangeHRM("Admin", "admin123");
+           
+
+           
         }
 
     }

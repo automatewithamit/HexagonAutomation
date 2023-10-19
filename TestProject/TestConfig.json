@@ -1,5 +1,6 @@
 {
   "browserType": "chrome",
+  "headless": "false",
   "currentURL": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   "OrangeHRM_URL": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   "Flipkart_URL": "https://www.flipkart.com/",
